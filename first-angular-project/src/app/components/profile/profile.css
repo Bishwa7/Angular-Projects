@@ -3,3 +3,8 @@
 .para-1 {
     @apply text-red-600;
 }
+
+
+.button-css {
+    @apply px-3 py-1 bg-gray-200 border rounded-md cursor-pointer active:scale-95;
+}
