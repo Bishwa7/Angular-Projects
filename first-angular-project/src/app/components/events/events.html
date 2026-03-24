@@ -1,0 +1,28 @@
+<input type="text" placeholder="Type here..." class="input-css" (input)="handleChange($event)" />
+
+<br/>
+
+<input type="text" placeholder="Type here to get event name..." class="input-css" (input)="eventNameFunc($event.type)" />
+
+<select class="select-css mx-2" (change)="eventNameFunc($event.type)">
+    <option value="">car</option>
+    <option value="">bike</option>
+    <option>truck</option>
+</select>
+
+<button (click)="eventNameFunc($event.type)" class="button-css">Click me</button>
+
+
+<input type="text" placeholder="Type here to get event name..." class="input-css mx-2" (blur)="eventNameFunc($event.type)" />
+
+<input type="text" placeholder="Type here to get event name..." class="input-css mx-2" (focus)="eventNameFunc($event.type)" />
+
+
+<div class="m-4 bg-red-200 w-[100px] h-[100px]" (mouseenter)="eventNameFunc($event.type)">
+
+</div>
+
+
+<div class="m-4 bg-red-200 w-[100px] h-[100px]" (mouseleave)="eventNameFunc($event.type)">
+
+</div>
