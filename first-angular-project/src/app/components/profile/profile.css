@@ -1,0 +1,5 @@
+@reference "tailwindcss";
+
+.para-1 {
+    @apply text-red-600;
+}

@@ -1,0 +1,5 @@
+@reference "tailwindcss";
+
+.head-1 {
+    @apply text-3xl font-bold ;
+}
