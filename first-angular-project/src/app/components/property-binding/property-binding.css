@@ -1,0 +1,10 @@
+@reference "tailwindcss";
+
+.input-css {
+    @apply w-[200px] px-2 py-1 border-2
+}
+
+
+.button-css {
+    @apply px-3 py-1 bg-gray-200 border rounded-md cursor-pointer active:scale-95;
+}

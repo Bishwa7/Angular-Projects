@@ -2,10 +2,11 @@ import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Profile } from './components/profile/profile';
 import { Events } from './components/events/events';
+import { PropertyBinding } from './components/property-binding/property-binding';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Profile, Events],
+  imports: [RouterOutlet, Profile, Events, PropertyBinding],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
