@@ -1,0 +1,65 @@
+<div class="parent-container">
+    <h1 class="head-1">Control Flow(If/Else), Toggle Multiple Conditions</h1>
+
+
+    <div>
+        @if( isLogin() )
+        {
+            <p>Welcome!!!</p>
+            <button class="button-css" (click)="userLogin(false)">Log out</button>
+        }
+        @else
+        {
+            <p>Please, Log in.</p>
+            <button class="button-css" (click)="userLogin(true)">Log in</button>
+        }
+    </div>
+
+
+    <hr class="border-t-[3px]">
+
+    <h2 class="head-2">Toggle</h2>
+
+    @if(show())
+    {
+        <p>Showing</p>
+        <button class="button-css" (click)="show.set(false)">Hide</button>
+    }
+    @else {
+        <p>Hidden</p>
+        <button class="button-css" (click)="show.set(true)">Show</button>
+    }
+    
+
+    
+    <hr class="border-t-[3px]">
+    
+    <h2 class="head-2">Multiple Options</h2>
+
+    <h3 class="head-3">Check Status</h3>
+    
+    <select (change)="handleStatusChange($event)" class="select-css">
+        <option value="notStarted">Not Started</option>
+        <option value="progress">Progress</option>
+        <option value="completed">Completed</option>
+        <option value="error">Error</option>
+    </select>
+
+    @if( status() == "notStarted")
+    {
+        <span style="color: black;">Not Started</span>
+    }
+    @else if(status() == "progress")
+    {
+        <span style="color: orange;">Progress</span>
+    }
+    @else if(status() == "completed")
+    {
+        <span style="color: green;">Completed</span>
+    }
+    @else if(status() == "error")
+    {
+        <span style="color: red;">Error</span>
+    }
+
+</div>

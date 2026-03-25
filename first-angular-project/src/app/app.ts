@@ -8,10 +8,11 @@ import { EffectForSignal } from './components/effect-for-signal/effect-for-signa
 import { SetUpdateDatatypesForSignal } from './components/set-update-datatypes-for-signal/set-update-datatypes-for-signal';
 import { CounterAppUsingSignal } from './components/counter-app-using-signal/counter-app-using-signal';
 import { SetGetUsingSignal } from './components/set-get-using-signal/set-get-using-signal';
+import { ControlFlowToggle } from './components/control-flow-toggle/control-flow-toggle';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Profile, Events, PropertyBinding, ComputedSignal, EffectForSignal, SetUpdateDatatypesForSignal, CounterAppUsingSignal, SetGetUsingSignal],
+  imports: [RouterOutlet, Profile, Events, PropertyBinding, ComputedSignal, EffectForSignal, SetUpdateDatatypesForSignal, CounterAppUsingSignal, SetGetUsingSignal, ControlFlowToggle],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
