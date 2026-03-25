@@ -1,0 +1,11 @@
+<div class="parent-container">
+    <h1 class="head-1">Set Update and Datatypes For Signal</h1>
+
+    <p> {{ data() }} </p>
+    <button class="button-css" (click)="updateData()">Update Data</button>
+
+    <br/>
+
+    <input type="text" placeholder="Add fruit..." [value]="newFruit" (input)="newFruit = $any($event.target).value" class="input-css" />
+    <button class="button-css" (click)="addToFruits()">Add Fruit</button>
+</div>

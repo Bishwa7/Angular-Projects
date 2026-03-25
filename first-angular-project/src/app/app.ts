@@ -5,10 +5,11 @@ import { Events } from './components/events/events';
 import { PropertyBinding } from './components/property-binding/property-binding';
 import { ComputedSignal } from './components/computed-signal/computed-signal';
 import { EffectForSignal } from './components/effect-for-signal/effect-for-signal';
+import { SetUpdateDatatypesForSignal } from './components/set-update-datatypes-for-signal/set-update-datatypes-for-signal';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Profile, Events, PropertyBinding, ComputedSignal, EffectForSignal],
+  imports: [RouterOutlet, Profile, Events, PropertyBinding, ComputedSignal, EffectForSignal, SetUpdateDatatypesForSignal],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
