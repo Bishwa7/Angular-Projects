@@ -1,0 +1,13 @@
+<div class="parent-container">
+
+    <h1 class="head-1">Effect For Signal</h1>
+
+    <p [style.color]="color">{{ speed() }}</p>
+    <button class="button-css" (click)="increaseSpeed()">Increase Speed</button>
+    
+    <br/>
+
+    <p> {{ fruit() }} </p>
+    <button (click)="changeFruit()" class="button-css">Change Fruit</button>
+
+</div>
