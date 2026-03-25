@@ -1,0 +1,17 @@
+@reference "tailwindcss";
+
+
+
+
+.parent-container {
+    @apply bg-red-200 m-2 p-2;
+}
+
+
+.head-1 {
+    @apply text-3xl font-bold;
+}
+
+.button-css {
+    @apply px-2 bg-gray-200 border-1 w-[100px] my-2;
+}
