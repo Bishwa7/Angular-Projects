@@ -1,0 +1,17 @@
+@reference "tailwindcss";
+
+.parent-container {
+    @apply flex flex-col gap-[15px] p-2 m-2 bg-purple-200 ;
+}
+
+.input-css {
+    @apply border-1 w-[500px] rounded-md p-1 ;
+}
+
+.button-css {
+    @apply border-1 bg-gray-300 p-1 w-[300px] rounded-md cursor-pointer active:scale-95 transition-transform duration-100 ease-in-out ;
+}
+
+.output-text {
+    @apply min-h-[32px] m-1 ;
+}

@@ -1,0 +1,5 @@
+<div class="parent-container">
+    <p class="output-text"> {{ data() }} </p>
+    <input class="input-css" type="text" placeholder="Type here..." [value]="data()" (input)="updateData($event.target.value)" />
+    <button class="button-css" (click)="setDefault()"> Set Default </button>
+</div>

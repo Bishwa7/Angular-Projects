@@ -7,10 +7,11 @@ import { ComputedSignal } from './components/computed-signal/computed-signal';
 import { EffectForSignal } from './components/effect-for-signal/effect-for-signal';
 import { SetUpdateDatatypesForSignal } from './components/set-update-datatypes-for-signal/set-update-datatypes-for-signal';
 import { CounterAppUsingSignal } from './components/counter-app-using-signal/counter-app-using-signal';
+import { SetGetUsingSignal } from './components/set-get-using-signal/set-get-using-signal';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Profile, Events, PropertyBinding, ComputedSignal, EffectForSignal, SetUpdateDatatypesForSignal, CounterAppUsingSignal],
+  imports: [RouterOutlet, Profile, Events, PropertyBinding, ComputedSignal, EffectForSignal, SetUpdateDatatypesForSignal, CounterAppUsingSignal, SetGetUsingSignal],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
