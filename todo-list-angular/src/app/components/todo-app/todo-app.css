@@ -1,0 +1,25 @@
+@reference "tailwindcss";
+
+.parent-container {
+    @apply flex flex-col gap-[30px] bg-red-300 m-2 p-2;
+}
+
+.head-1 {
+    @apply text-3xl font-bold ;
+}
+
+.input-css {
+    @apply border-1 border-rose-700 w-[500px] p-1 rounded-md bg-rose-600 text-white placeholder-white ;
+}
+
+.add-btn-css {
+    @apply border-1 p-1 rounded-md text-white bg-indigo-600 cursor-pointer active:scale-95 transition-all duration-300 ease-in-out w-[200px];
+}
+
+.del-btn-css {
+    @apply border-1 rounded-md text-white bg-rose-700 cursor-pointer active:scale-95 transition-all duration-300 ease-in-out w-[200px];
+}
+
+.task-css {
+    @apply flex gap-[30px]
+}

@@ -1,0 +1,17 @@
+<div class="parent-container">
+    <h1 class="head-1">To-Do App</h1>
+
+    <div class="flex gap-[10px]">
+        <input placeholder="Add Task..." class="input-css" [value]="title()" (input)="title.set($event.target.value)" />
+        <button class="add-btn-css" (click)="addTask()">Add Task</button>
+    </div>
+    
+
+    @for(task of tasks(); track task.id) {
+        <span class="task-css">
+            <p>{{ $index+1 }}.</p>
+            <span class="min-w-[100px]">{{ task.taskName }}</span> 
+            <button class="del-btn-css">Delete</button> 
+        </span>
+    }
+</div>
