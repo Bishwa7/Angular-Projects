@@ -12,10 +12,11 @@ import { ControlFlowToggle } from './components/control-flow-toggle/control-flow
 import { ForLoop } from './components/for-loop/for-loop';
 import { SwitchCase } from './components/switch-case/switch-case';
 import { TwoWayDataBinding } from './components/two-way-data-binding/two-way-data-binding';
+import { GetterSetterForSignal } from './components/getter-setter-for-signal/getter-setter-for-signal';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Profile, Events, PropertyBinding, ComputedSignal, EffectForSignal, SetUpdateDatatypesForSignal, CounterAppUsingSignal, SetGetUsingSignal, ControlFlowToggle, ForLoop, SwitchCase, TwoWayDataBinding],
+  imports: [RouterOutlet, Profile, Events, PropertyBinding, ComputedSignal, EffectForSignal, SetUpdateDatatypesForSignal, CounterAppUsingSignal, SetGetUsingSignal, ControlFlowToggle, ForLoop, SwitchCase, TwoWayDataBinding, GetterSetterForSignal],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
