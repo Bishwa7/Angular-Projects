@@ -10,10 +10,11 @@ import { CounterAppUsingSignal } from './components/counter-app-using-signal/cou
 import { SetGetUsingSignal } from './components/set-get-using-signal/set-get-using-signal';
 import { ControlFlowToggle } from './components/control-flow-toggle/control-flow-toggle';
 import { ForLoop } from './components/for-loop/for-loop';
+import { SwitchCase } from './components/switch-case/switch-case';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Profile, Events, PropertyBinding, ComputedSignal, EffectForSignal, SetUpdateDatatypesForSignal, CounterAppUsingSignal, SetGetUsingSignal, ControlFlowToggle, ForLoop],
+  imports: [RouterOutlet, Profile, Events, PropertyBinding, ComputedSignal, EffectForSignal, SetUpdateDatatypesForSignal, CounterAppUsingSignal, SetGetUsingSignal, ControlFlowToggle, ForLoop, SwitchCase],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

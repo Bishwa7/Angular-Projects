@@ -1,0 +1,27 @@
+<div class="parent-container">
+    <h1 class="head-1">Switch Case</h1>
+
+    <select class="select-css" (change)="handleStatusChange($event)">
+        <option value="notStarted">Not Started</option>
+        <option value="progress">In Progress</option>
+        <option value="completed">Completed</option>
+        <option value="error">Error</option>
+    </select>
+
+
+    @switch(status()) {
+
+        @case("notStarted") {
+            <span>Task not started yet</span>
+        }
+        @case("progress") {
+            <span>Task in progress</span>
+        }
+        @case("completed") {
+            <span>Task completed</span>
+        }
+        @default {
+            <span>Error</span>
+        }
+    }
+</div>
