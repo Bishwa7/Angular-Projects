@@ -1,0 +1,35 @@
+<div class="parent-container">
+    <h1 class="head-1">For Loop</h1>
+
+    <div>
+        <ul class="list-css">
+            @for(user of users(); track user)
+            {
+                <li> {{ user }} </li>
+            }
+        </ul>
+    </div>
+
+    <hr/>
+
+    <div>
+        <ul class="list-css">
+            @for(name of names(); track name.id)
+            {
+                <li> 
+                    @if($odd){
+                        <span class="text-rose-400">{{ $index }} {{ name.name + " " + name.lastName }} </span>
+                    }
+                    @else{
+                        <span class="text-cyan-400">{{ $index }} {{ name.name + " " + name.lastName }} </span>
+                    } 
+                </li>
+
+
+                @if($count == $index+1){
+                    <span class="font-bold">Total Names in array = {{ $count }} </span>
+                }
+            }
+        </ul>
+    </div>
+</div>

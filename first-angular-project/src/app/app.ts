@@ -9,10 +9,11 @@ import { SetUpdateDatatypesForSignal } from './components/set-update-datatypes-f
 import { CounterAppUsingSignal } from './components/counter-app-using-signal/counter-app-using-signal';
 import { SetGetUsingSignal } from './components/set-get-using-signal/set-get-using-signal';
 import { ControlFlowToggle } from './components/control-flow-toggle/control-flow-toggle';
+import { ForLoop } from './components/for-loop/for-loop';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Profile, Events, PropertyBinding, ComputedSignal, EffectForSignal, SetUpdateDatatypesForSignal, CounterAppUsingSignal, SetGetUsingSignal, ControlFlowToggle],
+  imports: [RouterOutlet, Profile, Events, PropertyBinding, ComputedSignal, EffectForSignal, SetUpdateDatatypesForSignal, CounterAppUsingSignal, SetGetUsingSignal, ControlFlowToggle, ForLoop],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
