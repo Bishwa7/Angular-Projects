@@ -1,0 +1,17 @@
+@reference "tailwindcss";
+
+.parent-container {
+    @apply flex flex-col gap-[15px] bg-emerald-300 m-2 p-2 ;
+}
+
+.head-1 {
+    @apply text-3xl font-bold ;
+}
+
+.head-2 {
+    @apply text-2xl font-bold ;
+}
+
+.input-css {
+    @apply border-1 w-[500px] p-1 ;
+}

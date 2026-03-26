@@ -1,0 +1,50 @@
+<div class="parent-container">
+    <h1 class="head-1">Two way Data Binding (Signals/Properties), Expose ngModel, Update objects using TwoWay Binding</h1>
+
+
+    <div class="mt-4">
+        <h2 class="head-2">TwoWay Binding Signal</h2>
+
+        <div class="flex gap-[10px] m-2">
+            <span> {{ name() }} </span>
+            <input class="input-css" [value]="name()" (input)="name.set($event.target.value)" />
+            <input class="input-css" [value]="name()" (input)="name.set($event.target.value)" />
+        </div>
+    </div>
+
+    <hr class="mt-6 mb-4" />
+
+    <div>
+        <h2 class="head-2">TwoWay Binding Properties (ngModel)</h2>
+
+        <div>
+            <span> {{ age }} </span>
+            <input class="input-css" type="number" [(ngModel)]="age" />
+            <input class="input-css" type="number" [ngModel]="age" (ngModelChange)="age = $event" />
+        </div>
+        
+    </div>
+
+    <hr class="mt-6 mb-4" />
+
+    <div class="mb-6 flex flex-col gap-[15px]">
+        <h2 class="head-2">Update Objects using TwoWay Binding</h2>
+
+        <div class="flex gap-[15px]">
+            <span> {{ user().name }} </span>
+            <input class="input-css" [value]="user().name" (input)="handleInput('name', $event.target.value)" />
+        </div>
+
+        <div class="flex gap-[15px]">
+            <span> {{ user().age }} </span>
+            <input class="input-css" type="number" [value]="user().age" (input)="handleInput('age', $event.target.value)" />
+        </div>
+
+        <div class="flex gap-[15px]">
+            <span> {{ user().email }} </span>
+            <input class="input-css" [value]="user().email" (input)="handleInput('email', $event.target.value)" />
+        </div>
+    </div>
+
+
+</div>
