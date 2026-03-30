@@ -1,0 +1,83 @@
+<div class="parent-container">
+
+    <h1 class="head-1">Directives in Angular</h1>
+
+    <div>
+        <h2 class="head-2">*ngFor Directive displaying items of array of string</h2>
+
+        <ul class="list-disc list-inside">
+            <li *ngFor="let user of users">
+                {{ user }}
+            </li>
+        </ul>
+    </div>
+
+    <div>
+        <h2 class="head-2">*ngFor Directive displaying array of objects</h2>
+
+        <ul class="list-disc list-inside">
+            <li *ngFor="let userData of usersData">
+                Name = {{ userData.name }}, Email = {{ userData.email }}
+            </li>
+        </ul>
+    </div>
+
+    <div class="flex flex-col gap-[10px]">
+        <div>            
+            <h2 class="head-2">*ngIf Directive</h2>
+
+            <div *ngIf="login; else elseBlock">
+                <p>You are logged in</p>
+                <button class="button-css" (click)="handleLogin()">Logout</button>
+            </div>
+            <ng-template #elseBlock>
+                <p>You are logged out</p>
+                <button class="button-css" (click)="handleLogin()">Login</button>
+            </ng-template>
+        </div>
+
+        <div>
+            <h2 class="head-2">*ngIf Directive</h2>
+
+            <div *ngIf="block == 0 ">
+                <span>Block 0</span>
+            </div>
+            <div *ngIf="block == 1 ">
+                <span>Block 1</span>
+            </div>
+            <div *ngIf="block == 2 ">
+                <span>Block 2</span>
+            </div>
+
+            <button class="button-css" (click)="changeBlock(0)">Block 0</button>
+            <button class="button-css" (click)="changeBlock(1)">Block 1</button>
+            <button class="button-css" (click)="changeBlock(2)">Block 2</button>
+        </div>
+        
+    </div>
+
+
+    <div>
+        <h2 class="head-2">*ngSwitch Directive</h2>
+
+        <select class="select-css" (change)="handleChange($event)">
+            <option>Select Colour</option>
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+            <option value="orange">Orange</option>
+        </select>
+        <div [ngSwitch]="color">
+            <p *ngSwitchCase="'red'" style="color: red;">Hello</p>
+            <p *ngSwitchCase="'green'" style="color: green;">Hello</p>
+            <p *ngSwitchCase="'blue'" style="color: blue;">Hello</p>
+            <p *ngSwitchCase="'orange'" style="color: orange;">Hello</p>
+            <p *ngSwitchDefault>Hello</p>
+
+        </div>
+        
+
+    </div>
+
+
+</div>

@@ -1,0 +1,21 @@
+@reference "tailwindcss";
+
+.parent-container {
+    @apply m-2 p-2 flex flex-col gap-[60px] bg-violet-300 ;
+}
+
+.head-1 {
+    @apply text-3xl font-bold ;
+}
+
+.head-2 {
+    @apply text-2xl font-bold ;
+}
+
+.button-css {
+    @apply bg-gray-300 px-2 border-1 rounded-md cursor-pointer active:scale-95 transition-all duration-300 ease-in-out ;
+}
+
+.select-css {
+    @apply p-1 border-1 bg-gray-300 w-[300px] rounded-md ;
+}
