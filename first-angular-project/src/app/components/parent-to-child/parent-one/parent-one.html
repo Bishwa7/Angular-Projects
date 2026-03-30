@@ -1,0 +1,16 @@
+<div class="parent-container">
+
+    <h1 class="head-1">Parent to child & Child to Parent - Data Passing using Input & Output</h1>
+    
+
+    <div>
+        <input placeholder="Type Here..." type="text" [value]="newUser()" (input)="newUser.set($event.target.value)" class="input-css">
+        <button (click)="handleSubmit()" class="btn-css">Add User</button>
+
+        @for(user of users(); track $index) {
+            <app-child-one [user]="user" (deleteUser)="deleteUser($event)"></app-child-one>
+        }
+
+    </div>
+    
+</div>
