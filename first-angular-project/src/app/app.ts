@@ -16,10 +16,11 @@ import { GetterSetterForSignal } from './components/getter-setter-for-signal/get
 import { DirectivesAngular } from './components/directives-angular/directives-angular';
 import { ParentOne } from './components/parent-to-child/parent-one/parent-one';
 import { ParentCount } from './global-state/components/parent-count/parent-count';
+import { Pipe } from './components/pipe/pipe';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Profile, Events, PropertyBinding, ComputedSignal, EffectForSignal, SetUpdateDatatypesForSignal, CounterAppUsingSignal, SetGetUsingSignal, ControlFlowToggle, ForLoop, SwitchCase, TwoWayDataBinding, GetterSetterForSignal, DirectivesAngular, ParentOne, ParentCount],
+  imports: [RouterOutlet, Profile, Events, PropertyBinding, ComputedSignal, EffectForSignal, SetUpdateDatatypesForSignal, CounterAppUsingSignal, SetGetUsingSignal, ControlFlowToggle, ForLoop, SwitchCase, TwoWayDataBinding, GetterSetterForSignal, DirectivesAngular, ParentOne, ParentCount, Pipe],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

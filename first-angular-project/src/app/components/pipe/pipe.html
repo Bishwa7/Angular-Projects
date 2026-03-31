@@ -1,0 +1,45 @@
+<div class="parent-container">
+    <h1 class="head-1"> {{ heading | titlecase }} </h1>
+
+    <p> {{ name() | uppercase }} </p>
+
+    <p> {{ money() | currency:'INR' }} </p>
+
+    <div>
+        <p class="font-bold">Date Pipe:- </p>
+        Day: {{ dateVar() | date:'dd' }}   <!-- day --> <br />
+        Month: {{ dateVar() | date:'MM' }}   <!-- month --> <br />
+        Year: {{ dateVar() | date:'yyyy' }} <!-- year --> <br />
+        Hour(24h): {{ dateVar() | date:'HH' }}   <!-- hour (24h) --> <br />
+        Minutes: {{ dateVar() | date:'mm' }}   <!-- minutes --> <br />
+        Seconds: {{ dateVar() | date:'ss' }}   <!-- seconds --> <br />
+        Full: {{ dateVar() | date:'full' }}         <br />
+        Short: {{ dateVar() | date:'short' }}
+    </div>
+
+
+    <div>
+        <p class="font-bold">JSON Pipe :-</p>
+
+        <p> {{ profile() | json }} </p>
+    </div>
+
+
+    <div>
+        <p class="font-bold"> Array of JSON Pipe :- </p>
+
+        <p> {{ users() | json }} </p>
+
+        <p>
+            @for(user of users(); track $index) {
+                <p> {{ user.name | json }} </p>
+            }
+
+        </p>
+    </div>
+
+
+    
+
+
+</div>
