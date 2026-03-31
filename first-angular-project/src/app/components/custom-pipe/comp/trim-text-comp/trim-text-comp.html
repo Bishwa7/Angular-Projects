@@ -1,0 +1,10 @@
+<div class="parent-container">
+    <h1 class="head-1">Custom Pipe in Angular 21</h1>
+    <div>
+        <h2 class="head-2">Custom Pipe to Trim Text</h2>
+        <p>Original String : {{ text() }} </p>
+        <p>Trim text : {{ text() | trimTextPipe }} </p>
+        <p>Trim text with args(20) : {{ text() | trimTextPipe:20 }} </p>
+        <p>Trim text with args(25) : {{ text() | trimTextPipe:25 }} </p>
+    </div>
+</div>

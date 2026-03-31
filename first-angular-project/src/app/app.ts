@@ -17,10 +17,11 @@ import { DirectivesAngular } from './components/directives-angular/directives-an
 import { ParentOne } from './components/parent-to-child/parent-one/parent-one';
 import { ParentCount } from './global-state/components/parent-count/parent-count';
 import { Pipe } from './components/pipe/pipe';
+import { TrimTextComp } from './components/custom-pipe/comp/trim-text-comp/trim-text-comp';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Profile, Events, PropertyBinding, ComputedSignal, EffectForSignal, SetUpdateDatatypesForSignal, CounterAppUsingSignal, SetGetUsingSignal, ControlFlowToggle, ForLoop, SwitchCase, TwoWayDataBinding, GetterSetterForSignal, DirectivesAngular, ParentOne, ParentCount, Pipe],
+  imports: [RouterOutlet, Profile, Events, PropertyBinding, ComputedSignal, EffectForSignal, SetUpdateDatatypesForSignal, CounterAppUsingSignal, SetGetUsingSignal, ControlFlowToggle, ForLoop, SwitchCase, TwoWayDataBinding, GetterSetterForSignal, DirectivesAngular, ParentOne, ParentCount, Pipe, TrimTextComp],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

@@ -1,0 +1,13 @@
+@reference "tailwindcss";
+
+.parent-container {
+    @apply bg-purple-500 m-2 p-2 flex flex-col gap-[15px] ;
+}
+
+.head-1 {
+    @apply text-3xl font-bold ;
+}
+
+.head-2 {
+    @apply text-2xl font-bold ;
+}
