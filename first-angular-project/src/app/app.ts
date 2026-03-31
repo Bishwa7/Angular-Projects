@@ -15,10 +15,11 @@ import { TwoWayDataBinding } from './components/two-way-data-binding/two-way-dat
 import { GetterSetterForSignal } from './components/getter-setter-for-signal/getter-setter-for-signal';
 import { DirectivesAngular } from './components/directives-angular/directives-angular';
 import { ParentOne } from './components/parent-to-child/parent-one/parent-one';
+import { ParentCount } from './global-state/components/parent-count/parent-count';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Profile, Events, PropertyBinding, ComputedSignal, EffectForSignal, SetUpdateDatatypesForSignal, CounterAppUsingSignal, SetGetUsingSignal, ControlFlowToggle, ForLoop, SwitchCase, TwoWayDataBinding, GetterSetterForSignal, DirectivesAngular, ParentOne],
+  imports: [RouterOutlet, Profile, Events, PropertyBinding, ComputedSignal, EffectForSignal, SetUpdateDatatypesForSignal, CounterAppUsingSignal, SetGetUsingSignal, ControlFlowToggle, ForLoop, SwitchCase, TwoWayDataBinding, GetterSetterForSignal, DirectivesAngular, ParentOne, ParentCount],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

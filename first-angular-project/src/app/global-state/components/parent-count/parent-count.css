@@ -1,0 +1,9 @@
+@reference "tailwindcss";
+
+.parent-container {
+    @apply m-2 p-2 bg-emerald-200 flex flex-col gap-[15px] ;
+}
+
+.head-1 {
+    @apply text-3xl font-bold ;
+}

@@ -1,0 +1,9 @@
+@reference "tailwindcss";
+
+.parent-css {
+    @apply flex items-center justify-center space-x-6 bg-yellow-300 rounded-xl p-6 mx-4 my-1 ;
+}
+
+.btn-css {
+    @apply px-2 py-1 bg-rose-400 rounded-md border-1 text-white cursor-pointer active:scale-95 transition-all duration-300 ease-in-out ;
+}
