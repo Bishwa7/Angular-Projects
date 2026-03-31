@@ -1,0 +1,9 @@
+@reference "tailwindcss";
+
+.app-parent-container {
+    @apply flex flex-col gap-[20px] ;
+}
+
+.outlet-div {
+    @apply mx-12 ;
+}

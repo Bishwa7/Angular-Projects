@@ -1,0 +1,17 @@
+@reference "tailwindcss";
+
+.parent-container {
+    @apply flex justify-between ;
+}
+
+.head-1 {
+    @apply text-3xl font-bold ml-12 ;
+}
+
+.list-css {
+    @apply flex justify-between min-w-[400px] mr-18 ;
+}
+
+.active {
+    @apply text-rose-600 font-bold ;
+}
