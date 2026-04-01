@@ -8,6 +8,14 @@ import { PageNotFound } from './components/routing/page/page-not-found/page-not-
 export const routes: Routes = [
     {path: "", component: Home},
     {
+        path: "about/:id/:name",
+        component: About
+    },
+    {
+        path: "about/:id",
+        component: About
+    },
+    {
         path: "about",
         component: About
     },

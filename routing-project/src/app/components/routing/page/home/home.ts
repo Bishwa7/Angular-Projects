@@ -27,4 +27,8 @@ export class Home {
     })
   }
 
+  goTOProfileRoute() {
+    this.router.navigate(['about', this.users().id, this.users().name])
+  }
+
 }
