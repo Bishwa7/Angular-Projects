@@ -4,6 +4,7 @@ import { About } from './components/routing/page/about/about';
 import { Contact } from './components/routing/page/contact/contact';
 import { Profile } from './components/routing/page/profile/profile';
 import { PageNotFound } from './components/routing/page/page-not-found/page-not-found';
+import { ContactDetails } from './components/routing/page/contact-details/contact-details';
 
 export const routes: Routes = [
     {path: "", component: Home},
@@ -22,6 +23,10 @@ export const routes: Routes = [
     {
         path: "contact",
         component: Contact
+    },
+    {
+        path: "contact-details/:id",
+        component: ContactDetails
     },
     {
         path: "profile",

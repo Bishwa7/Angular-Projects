@@ -1,0 +1,5 @@
+@reference "tailwindcss";
+
+.parent-container {
+    @apply flex flex-col gap-[48px] ;
+}

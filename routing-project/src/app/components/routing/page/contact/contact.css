@@ -1,0 +1,14 @@
+@reference "tailwindcss";
+
+
+.parent-container {
+    @apply flex flex-col gap-[32px] ;
+}
+
+.head-2 {
+    @apply text-2xl font-bold ;
+}
+
+.link-css {
+    @apply block hover:text-red-400 w-fit ;
+}

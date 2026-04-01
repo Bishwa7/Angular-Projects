@@ -1,1 +1,15 @@
-<p>contact works!</p>
+<div class="parent-container">
+    <p>contact works!</p>
+
+
+    <div class="flex flex-col gap-[5px]">
+
+        <h1 class="head-2">Route Params to Dynamic Page</h1>
+
+        <div>
+            @for(user of userData(); track $index) {
+                <a [routerLink]="['/contact-details', user.id]" class="link-css"> {{ user.name }} </a>
+            }
+        </div>
+    </div>
+</div>
