@@ -1,3 +1,18 @@
-<p>home works!</p>
+<div class="parent-container">
+    
+    <h1 class="head-1">home works!</h1>
 
-<button class="btn-css" (click)="goTOProfile()">Go to Profile</button>
+    <button class="btn-css" (click)="goTOProfile()">Go to Profile</button>
+
+    
+
+    <div>
+        <h2 class="head-2">Query Params</h2>
+
+        <a routerLink="/profile" [queryParams]="{id:users().id, name:users().name, age:users().age}" class="link-css">Link to Profile (Query Param)</a>
+
+        <br/><br/>
+        <button class="btn-css" (click)="goTOProfileQuery()">Button to Profile (Query Param)</button>
+    </div>
+    
+</div>
