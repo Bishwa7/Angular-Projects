@@ -1,0 +1,5 @@
+@reference "tailwindcss";
+
+.btn-css {
+    @apply bg-gray-300 p-1 border-1 rounded-md cursor-pointer active:scale-95 transition-all duration-300 ease-in-out ;
+}

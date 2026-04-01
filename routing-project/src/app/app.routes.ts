@@ -3,6 +3,7 @@ import { Home } from './components/routing/page/home/home';
 import { About } from './components/routing/page/about/about';
 import { Contact } from './components/routing/page/contact/contact';
 import { Profile } from './components/routing/page/profile/profile';
+import { PageNotFound } from './components/routing/page/page-not-found/page-not-found';
 
 export const routes: Routes = [
     {path: "", component: Home},
@@ -17,5 +18,13 @@ export const routes: Routes = [
     {
         path: "profile",
         component: Profile
+    },
+    {
+        path: "careers",
+        redirectTo: "contact"
+    },
+    {
+        path: "**",
+        component: PageNotFound
     }
 ];
