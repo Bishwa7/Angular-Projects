@@ -1,0 +1,22 @@
+<div class="parent-container">
+
+    <h1 class="head-1">Reactive Form with Input Field</h1>
+
+    <div class="content-div">
+
+        <div>
+            <div>Email: {{email.value}} </div>
+            <div>Password: {{password.value}} </div>
+        </div>
+
+        <input class="input-css" type="text" placeholder="Enter Email" [formControl]="email" />
+
+        <input class="input-css" type="password" placeholder="Enter Password" [formControl]="password" />
+
+        <div class="btns-div">
+            <button class="btn-css" (click)="submit()">Submit</button>
+            <button class="btn-css" (click)="reset()">Reset</button>
+        </div>
+        
+    </div>
+</div>
