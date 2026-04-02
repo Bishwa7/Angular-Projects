@@ -30,12 +30,12 @@
 
         <p> {{ users() | json }} </p>
 
-        <p>
+        <div>
             @for(user of users(); track $index) {
                 <p> {{ user.name | json }} </p>
             }
 
-        </p>
+        </div>
     </div>
 
 

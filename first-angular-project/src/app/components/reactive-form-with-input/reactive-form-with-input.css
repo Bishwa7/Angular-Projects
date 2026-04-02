@@ -13,7 +13,7 @@
 }
 
 .input-css {
-    @pply w-[500px] border-1 p-1 bg-white ; 
+    @apply w-[500px] border-1 p-1 bg-white ; 
 }
 
 .btns-div {
