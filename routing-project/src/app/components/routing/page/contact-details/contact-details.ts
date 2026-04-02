@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { ContactService } from '../../../../services/contact/contact-service';
 import { ActivatedRoute } from '@angular/router';
 
@@ -17,10 +17,12 @@ type ContactType = {
   styleUrl: './contact-details.css',
 })
 export class ContactDetails {
+  readonly details = inject(ContactService);
+  // readonly route = inject(ActivatedRoute);
 
-  userData = signal<ContactType>({id:0, name: "", email: "", age:0})
+  readonly userData = signal<ContactType>({id:0, name: "", email: "", age:0})
   
-  constructor(public details:ContactService, public route:ActivatedRoute){}
+  constructor(public route : ActivatedRoute){}
 
   ngOnInit() {
     const data = this.details.contactList()
