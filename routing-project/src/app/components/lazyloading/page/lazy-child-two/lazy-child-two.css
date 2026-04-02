@@ -1,0 +1,9 @@
+@reference "tailwindcss";
+
+.parent-container {
+    @apply flex flex-col gap-[24px] ;
+}
+
+.btn-css {
+    @apply bg-gray-300 w-fit p-1 rounded-md border-1 cursor-pointer active:scale-95 transition-all duration-300 ease-in-out ;
+}

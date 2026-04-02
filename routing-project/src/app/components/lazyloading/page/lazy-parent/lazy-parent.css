@@ -16,3 +16,7 @@
 .active {
     @apply text-rose-600 font-bold ;
 }
+
+.outlet-div {
+    @apply mt-[20px] ;
+}
