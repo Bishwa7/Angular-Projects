@@ -1,0 +1,18 @@
+<div class="parent-container">
+    <h1 class="head-1">Reactive Form with Forms</h1>
+
+    <div class="content-div">
+        <form [formGroup]="loginForm" (ngSubmit)="handleSubmit()" method="post" class="form-css">
+            <input class="input-css" type="text" formControlName="name" placeholder="Enter Name" />
+            <input class="input-css" type="email" formControlName="email" placeholder="Enter Email" />
+            <input class="input-css" type="password" formControlName="password" placeholder="Enter password" />
+
+
+            <div class="btns-div">
+                <button class="btn-css">Submit</button>
+                <button (click)="resetForm()" class="btn-css">Reset</button>
+            </div>
+            
+        </form>
+    </div>
+</div>
