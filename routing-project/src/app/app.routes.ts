@@ -8,6 +8,7 @@ import { ContactDetails } from './components/routing/page/contact-details/contac
 import { User } from './components/routing/page/user/user';
 import { UserProfile } from './components/routing/page/user-profile/user-profile';
 import { UserSettings } from './components/routing/page/user-settings/user-settings';
+import { NonLazyChildFour } from './components/lazyloading/page/non-lazy-child-four/non-lazy-child-four';
 
 export const routes: Routes = [
     {path: "", component: Home},
@@ -46,6 +47,18 @@ export const routes: Routes = [
             {path:"", redirectTo: "user-profile", pathMatch:'full'},
             {path:"user-profile", component: UserProfile},
             {path: "user-settings", component: UserSettings}
+        ]
+    },
+    {
+        path: "lazy-parent",
+        //component: Profile
+        loadComponent:()=> import('./components/lazyloading/page/lazy-parent/lazy-parent').then((c)=>c.LazyParent),
+        children: [
+            {path:"", redirectTo:"lazy-child-one", pathMatch:'full'},
+            {path:"lazy-child-one", loadComponent: ()=> import('./components/lazyloading/page/lazy-child-one/lazy-child-one').then((c)=>c.LazyChildOne)},
+            {path:"lazy-child-two", loadComponent: ()=> import('./components/lazyloading/page/lazy-child-two/lazy-child-two').then((c)=>c.LazyChildTwo)},
+            {path:"lazy-child-three", loadComponent: ()=> import('./components/lazyloading/page/lazy-child-three/lazy-child-three').then((c)=>c.LazyChildThree)},
+            {path:"non-lazy-child-four", component: NonLazyChildFour}
         ]
     },
     {

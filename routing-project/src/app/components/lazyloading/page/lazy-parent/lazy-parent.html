@@ -1,0 +1,16 @@
+<div class="parent-container">
+    <h1 class="head-1">Lazy-Parent Works!</h1>
+
+    <div class="content-div">
+        <div>
+            <ul class="list-css">
+                <li><a routerLinkActive="active"  routerLink="lazy-child-one">Lazy-Child-1</a></li>
+                <li><a routerLinkActive="active" routerLink="lazy-child-two">Lazy-Child-2</a></li>
+                <li><a routerLinkActive="active"  routerLink="lazy-child-three">Lazy-Child-3</a></li>
+                <li><a routerLinkActive="active" routerLink="non-lazy-child-four">Non-Lazy-Child-4</a></li>
+            </ul>
+        </div>
+
+        <router-outlet></router-outlet>
+    </div>
+</div>

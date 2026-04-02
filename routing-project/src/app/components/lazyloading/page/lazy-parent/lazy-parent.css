@@ -1,0 +1,18 @@
+@reference "tailwindcss";
+
+.parent-container {
+    @apply flex flex-col gap-[15px] ;
+}
+
+.head-1 {
+    @apply text-3xl font-bold ;
+}
+
+
+.list-css {
+    @apply flex justify-start gap-[20px] ;
+}
+
+.active {
+    @apply text-rose-600 font-bold ;
+}
