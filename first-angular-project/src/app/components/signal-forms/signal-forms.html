@@ -1,0 +1,29 @@
+<div class="parent-container">
+    <h1 class="head-1">Signal Forms</h1>
+
+    <div>
+        <input type="email" placeholder="Enter Email" class="input-css" [formField]="loginForm.email" />
+
+        @if (loginForm.email().invalid() && (loginForm.email().touched() || loginForm().touched())) {
+            @for (error of loginForm.email().errors(); track error) {
+                <span class="error">{{ error.message }}</span>
+            }
+        }
+    </div>
+
+    <div>
+        <input type="password" placeholder="Enter Password" class="input-css" [formField]="loginForm.password" />
+
+        @if (loginForm.password().invalid() && (loginForm.password().touched() || loginForm().touched())) {
+            @for (error of loginForm.password().errors(); track error) {
+                <span class="error">{{ error.message }}</span>
+            }
+        }
+    </div>
+
+    <div class="btn-div">
+        <button type="submit" class="btn-css" [disabled]="loginForm().invalid()" (click)="handleSubmit()">Submit</button>
+
+        <button type="reset" class="btn-css" (click)="resetForm()">Reset</button>
+    </div>
+</div>
