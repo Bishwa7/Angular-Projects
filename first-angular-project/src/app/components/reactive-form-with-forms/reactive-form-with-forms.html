@@ -3,14 +3,47 @@
 
     <div class="content-div">
         <form [formGroup]="loginForm" (ngSubmit)="handleSubmit()" method="post" class="form-css">
-            <input class="input-css" type="text" formControlName="name" placeholder="Enter Name" />
-            <input class="input-css" type="email" formControlName="email" placeholder="Enter Email" />
-            <input class="input-css" type="password" formControlName="password" placeholder="Enter password" />
 
+            <div>
+                <input class="input-css" type="text" formControlName="name" placeholder="Enter Name" />
+                @if(name?.hasError('required') && name?.touched) {
+                    <span class="error">Name is required.</span>
+                }
+                
+            </div>
+
+            <div>
+                <input class="input-css" type="email" formControlName="email" placeholder="Enter Email" />
+                @if(email?.hasError('required') && email?.touched) {
+                    <span class="error">Email is required.</span>
+                }
+
+                @if(email?.errors?.['email'] && email?.touched) {
+                    <span class="error">Enter a valid Email Id.</span>
+                }
+            </div>
+            
+
+            <div>
+                <input class="input-css" type="password" formControlName="password" placeholder="Enter password" />
+                @if(password?.hasError('required') && password?.touched) {
+                    <span class="error">Password is required.</span>
+                }
+
+                @if(password?.errors?.['minlength'] && password?.touched) {
+                    <span class="error">Password should contain atleast 5 characters.</span>
+                }
+
+                @if(password?.errors?.['maxlength'] && password?.touched) {
+                    <span class="error">Password length should not be more than 8 characters.</span>
+                }
+            </div>
+
+            
 
             <div class="btns-div">
-                <button class="btn-css">Submit</button>
-                <button (click)="resetForm()" class="btn-css">Reset</button>
+                <button type="submit" class="btn-css" [disabled]="loginForm.invalid">Submit</button>
+                <button type="reset" (click)="resetForm()" class="btn-css">Reset</button>
             </div>
             
         </form>
