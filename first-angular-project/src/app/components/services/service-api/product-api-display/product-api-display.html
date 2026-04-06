@@ -1,0 +1,13 @@
+<div class="parent-container">
+
+    <h1 class="head-1">Service API</h1>
+
+    <div class="flex flex-col">
+        @for(product of productData(); track $index) {
+            <div>
+                <span>Name: {{ product.title }} || </span><span> Price: {{ product.price }} </span>
+            </div>
+            
+        }
+    </div>
+</div>
