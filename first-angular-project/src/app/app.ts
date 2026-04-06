@@ -21,10 +21,11 @@ import { TrimTextComp } from './components/custom-pipe/comp/trim-text-comp/trim-
 import { ReactiveFormWithInput } from './components/reactive-form-with-input/reactive-form-with-input';
 import { ReactiveFormWithForms } from './components/reactive-form-with-forms/reactive-form-with-forms';
 import { SignalForms } from './components/signal-forms/signal-forms';
+import { DisplayServiceOne } from './components/services/service-basic/display-service-one/display-service-one';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Profile, Events, PropertyBinding, ComputedSignal, EffectForSignal, SetUpdateDatatypesForSignal, CounterAppUsingSignal, SetGetUsingSignal, ControlFlowToggle, ForLoop, SwitchCase, TwoWayDataBinding, GetterSetterForSignal, DirectivesAngular, ParentOne, ParentCount, Pipe, TrimTextComp, ReactiveFormWithInput, ReactiveFormWithForms, SignalForms],
+  imports: [RouterOutlet, Profile, Events, PropertyBinding, ComputedSignal, EffectForSignal, SetUpdateDatatypesForSignal, CounterAppUsingSignal, SetGetUsingSignal, ControlFlowToggle, ForLoop, SwitchCase, TwoWayDataBinding, GetterSetterForSignal, DirectivesAngular, ParentOne, ParentCount, Pipe, TrimTextComp, ReactiveFormWithInput, ReactiveFormWithForms, SignalForms, DisplayServiceOne],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

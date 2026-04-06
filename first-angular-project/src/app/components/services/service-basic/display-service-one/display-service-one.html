@@ -1,0 +1,27 @@
+<div class="parent-container">
+    <h1 class="head-1">Services in Angular</h1>
+
+    <div>
+        <h2 class="head-2">Product Details</h2>
+
+        <div class="flex flex-col">
+            @for(product of productDetails() ; track $index) {
+                <span>Product Name :  {{ product.name }}, Price : {{ product.price }} </span>
+            }
+        </div>
+        
+    </div>
+
+    <div>
+        <h2 class="head-2">Product Details on button click</h2>
+
+        <div>
+            <button (click)="handleProductDisplay()" class="btn-css">Product</button>
+            <div class="flex flex-col">
+                @for(product of productDetails2() ; track $index) {
+                    <span>Product Name :  {{ product.name }}, Price : {{ product.price }} </span>
+                }
+            </div>
+        </div>
+    </div>
+</div>
