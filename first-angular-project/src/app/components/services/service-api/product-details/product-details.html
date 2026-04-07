@@ -1,0 +1,15 @@
+<div class="parent-container">
+
+    <h2 class="head-2">Product Details for Product id : {{ productData()?.id }} </h2>
+
+    <div class="content-div">
+        <img [src]="productData()?.thumbnail" />
+
+        <ul class="list-inside">
+            <li> Name: {{ productData()?.title }} </li>
+            <li> Price: {{ productData()?.price }} </li>
+            <li> Description: {{ productData()?.description }} </li>
+            <li> Rating: {{ productData()?.rating }} </li>
+        </ul>
+    </div>
+</div>

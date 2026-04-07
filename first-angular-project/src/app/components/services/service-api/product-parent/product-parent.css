@@ -1,0 +1,15 @@
+@reference "tailwindcss";
+
+.parent-container {
+    @apply flex flex-col gap-[15px] bg-emerald-200 m-2 p-2 ;
+}
+
+.head-1 {
+    @apply text-3xl font-bold ;
+}
+
+
+.btn-css {
+    @apply bg-gray-300 w-[100px] p-1 border-1 rounded-md cursor-pointer active:scale-95 transition-all duration-300 ease-in-out ;
+}
+

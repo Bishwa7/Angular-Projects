@@ -1,0 +1,10 @@
+<div class="parent-container">
+
+    <h2 class="head-2">Service API Product List</h2>
+
+    <div>
+        @for(product of productData(); track $index) {
+            <li class="list-css"> <a [routerLink]="'details/'+product.id"> {{ product.title }} </a> </li>
+        }
+    </div>
+</div>
