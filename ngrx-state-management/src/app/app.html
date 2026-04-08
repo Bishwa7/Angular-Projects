@@ -1,6 +1,10 @@
 <div class="parent-container">
   <h1 class="head-1">NgRx Counter App</h1>
 
+
+  <div>
+    Counter : {{ counter$ | async }}
+  </div>
   <div class="btn-div">
     <button class="btn-css" (click)="dec()">-</button>
     <button class="btn-css" (click)="resetCounter()">reset</button>

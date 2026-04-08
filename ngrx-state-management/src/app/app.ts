@@ -1,25 +1,32 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Store } from '@ngrx/store';
-import { decreament, increament, reset } from '../store/counter.actions';
+import { decrement, increment, reset } from '../store/counter.actions';
+import { Observable } from 'rxjs';
+import { CommonModule } from '@angular/common';
+import { AppState, selectFeatureCount } from '../store/counter.selectors';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, CommonModule],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
 
-  constructor(private store : Store){}
+  counter$! : Observable<number>;
+
+  constructor(private store : Store<AppState>){
+    this.counter$ = this.store.select(selectFeatureCount)
+  }
 
 
   inc() {
-    this.store.dispatch(increament())
+    this.store.dispatch(increment())
   }
 
   dec() {
-    this.store.dispatch(decreament())
+    this.store.dispatch(decrement())
   }
 
   resetCounter() {
