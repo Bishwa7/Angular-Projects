@@ -1,5 +1,7 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { Store } from '@ngrx/store';
+import { decreament, increament, reset } from '../store/counter.actions';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +10,21 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('ngrx-state-management');
+
+  constructor(private store : Store){}
+
+
+  inc() {
+    this.store.dispatch(increament())
+  }
+
+  dec() {
+    this.store.dispatch(decreament())
+  }
+
+  resetCounter() {
+    this.store.dispatch(reset())
+  }
+
+
 }
