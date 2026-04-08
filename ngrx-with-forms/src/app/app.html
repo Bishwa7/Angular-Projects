@@ -1,0 +1,20 @@
+<div class="parent-container">
+  <h1 class="head-1">NgRx with Form using Feature creator</h1>
+
+  <div class="content-div">
+    @if(form$ | async; as form) {
+      <input class="input-css" type="text" placeholder="Enter Name" [value]="form.name" (input)="onFieldChange('name', $event.target.value)" />
+      <input class="input-css" type="email" placeholder="Enter Email" [value]="form.email" (input)="onFieldChange('email', $event.target.value)" />
+
+      <button class="btn-css" (click)="resetFormFunc()">Reset</button>
+
+
+
+      <div>
+        <h2 class="head-2">Form Preview</h2>
+        <pre> {{ form | json }} </pre>
+      </div>
+    }
+  </div>
+
+</div>
