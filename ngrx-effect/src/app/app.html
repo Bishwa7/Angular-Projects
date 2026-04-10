@@ -1,0 +1,26 @@
+<div class="parent-container">
+  <h1 class="head-1">NgRx Effects</h1>
+
+  <div class="content-div">
+
+
+    <button class="btn-css" (click)="load()">Load Users</button>
+
+    @if(users$ | async; as state) {
+      @if(state.loading) {
+        <p>Loading...</p>
+      }
+      @else if(state.error) {
+        <p>Error:  {{state.error}} </p>
+      }
+      @else {
+        <div>
+          @for(user of state.users; track $index) {
+            <li class="list-css"> Name: {{user.name}} </li>
+          }
+        </div>
+      }
+      
+    }
+  </div>
+</div>
