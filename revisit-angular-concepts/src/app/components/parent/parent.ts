@@ -18,4 +18,9 @@ export class Parent {
     }
     this.newUser.set("")
   }
+
+  delUser(indexToRemove: number) {
+    console.log(`Removing Index : ${indexToRemove} `)
+    this.users.update((data)=>(data.filter((item, i)=> i != indexToRemove)))
+  }
 }

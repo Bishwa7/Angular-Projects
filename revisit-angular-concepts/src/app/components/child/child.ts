@@ -1,4 +1,4 @@
-import { Component, computed, input, Input } from '@angular/core';
+import { Component, computed, input, Input, output } from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -12,6 +12,8 @@ export class Child {
   // @Input() userName:string | undefined;
 
   userName = input<string>();
+  userIndex = input.required<number>();
+  delUser = output<number>();
 
   greetings = computed(()=> {
     const name = this.userName
@@ -22,4 +24,9 @@ export class Child {
 
     return `Hello, ${name()}`
   })
+
+
+  deleteUser(){
+    this.delUser.emit(this.userIndex())
+  }
 }

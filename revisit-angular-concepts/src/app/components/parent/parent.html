@@ -1,14 +1,14 @@
 
 <div class="flex flex-col gap-10 m-10">
     <div class="flex gap-6">
-        <input class="input-css" placeholder="Enter new User Name" (input)="newUser.set($event.target.value)" [value]="newUser()" />
+        <input #userInput class="input-css" placeholder="Enter new User Name" (input)="newUser.set($event.target.value)" [value]="newUser()" />
         <button class="btn-css" (click)="addUser()">Add User</button>
     </div>
 
 
     <div>
         @for(user of users(); track $index){
-            <app-child [userName]="user"></app-child>
+            <app-child [userName]="user" [userIndex]="$index" (delUser)="delUser($event)" ></app-child>
         }
     </div>
 </div>
