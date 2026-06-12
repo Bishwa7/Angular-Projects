@@ -10,4 +10,12 @@ import { Child } from '../child/child';
 export class Parent {
 
   users = signal(["Bishwanath", "Cristiano", "Gareth", "Marcelo", "Ramos"])
+  newUser = signal("")
+
+  addUser(){
+    if(this.newUser().trim()){
+      this.users.update((data)=> ([...data, this.newUser()]))  
+    }
+    this.newUser.set("")
+  }
 }

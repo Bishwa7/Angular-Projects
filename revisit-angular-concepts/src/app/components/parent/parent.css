@@ -1,0 +1,9 @@
+@reference "tailwindcss";
+
+.input-css {
+    @apply w-[500px] border-1 rounded-md p-2 ;
+}
+
+.btn-css {
+    @apply p-2 border-1 rounded-md bg-gray-300 cursor-pointer active:scale-95 transition-all duration-300 ;
+}
